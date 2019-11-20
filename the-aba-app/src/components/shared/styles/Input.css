@@ -1,0 +1,37 @@
+.input {
+	position: relative;
+	transition: all 0.4s ease;
+}
+
+.input input {
+	padding: 0.8em 0.4em;
+	width: 100%;
+	border-radius: 4px;
+	border: 2px solid #d1c4e9;
+	outline: none;
+	transition: all 0.4s ease;
+	font-size: 16px;
+}
+
+.input input:focus,
+.input input:active {
+	border-color: #7986cb;
+}
+
+.input label {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 1000;
+	pointer-events: none;
+	transition: all 0.4s ease;
+	background-color: #ffffff;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.input input:focus + label,
+.input input:active + label,
+.input input:valid + label {
+	transform: translateY(-1.2em);
+}

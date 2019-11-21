@@ -13,6 +13,8 @@ class Teams extends Component {
             teams: [],
         }
     }
+    
+    
     componentDidMount() {
         this.fetchTeams()
 
@@ -41,6 +43,7 @@ class Teams extends Component {
 
 
                 </Card>
+               
             )
         }
         )

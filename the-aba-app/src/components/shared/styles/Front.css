@@ -1,0 +1,5 @@
+.main-art{
+    display:flex;
+    border: solid black 5px;
+    margin-left: 50px;
+}

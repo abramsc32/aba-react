@@ -2,51 +2,57 @@ import React, { Component } from 'react'
 import ArticleForm from '../ArticleForm'
 import { mockApi } from '../../services/ApiConfig'
 
-export default class CreateArticle extends Component {
+export default class CreateArticles extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            personName: '',
+            name: '',
             title: '',
             description: '',
             paragraph: '',
             image: '',
+            newPost:[],
             errorMsg: '',
+        }
+       
+    }
+
+    handleChange = (event) => {
+        this.setState({ [event.target.name]: event.target.value })
+     }
+
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        const { name, title, description, paragraph, image } = this.state
+        const data = {
+            name,
+            title,
+            description,
+            paragraph,
+            image
+        }
+        mockApi.post('/News', data)
+            .then((res) => res.status === 201 ? this.props.history.push('/Articles') : null)
+            .catch(() => this.setState({ errorMsg: 'There was an ERROR!' }))
+    }
+
+    render() {
+        const { name, title, description, paragraph, image } = this.state
+        console.log('yoo')
+        return (
+            <div className="food-forms">
+                <h3>Create Article</h3>
+                <ArticleForm
+                    formData={{ name, title, description, paragraph, image }}
+                    onChange={this.handleChange}
+                    onSubmit={this.handleSubmit}
+                    this={'isaprop'}
+                />
+                {this.state.errorMsg ? (
+                    <p className="error-text">{this.state.errorMsg}</p>
+                ) : null}
+            </div>
+        )
     }
 }
-
-
-        handleSubmit = (e) => {
-            e.preventDefault()
-            const { personName, title, description, paragraph } = this.state
-            const data = {
-                personName,
-                title,
-                description,
-                paragraph,
-                image
-            }
-            mockApi.post('/News', data)
-                .then((res) => res.status === 201 ? this.props.history.push('/News') : null)
-                .catch(() => this.setState({ errorMsg: 'There was an ERROR!' }))
-        }
-        handleChange = e => this.setState({ [e.target.name]: e.target.value })
-
-        render() {
-            const { personName, title, description, paragraph, image } = this.state
-            console.log('yoo', personName)
-            return (
-                <div className="article-forms">
-                    <h3>Create Article</h3>
-                    <ArticleForm
-                        formData={ personName, title, description, paragraph, image }
-                        onChange={this.handleChange}
-                        onSubmit={this.handleSubmit}
-                    />
-                    {this.state.errorMsg ? (
-                        <p className="error-text">{this.state.errorMsg}</p>
-                    ) : null}
-                </div>
-            )
-        }
-    }

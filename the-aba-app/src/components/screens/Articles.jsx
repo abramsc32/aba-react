@@ -28,19 +28,16 @@ export default class Articles extends Component {
     }
 
     renderArticle = () => {
-        const {
-            match: { path },
-            history,
-        } = this.props
+       
         if (this.state.articles.length) {
             return this.state.articles.map((news) => (
                 <Card key={news.id}>
-                    <CardHeader imageUrl={news.image.url}> 
-                    <h1>{news.title}</h1> 
+                    <CardHeader imageUrl={news.image}>
+                        <h1>{news.title}</h1>
                     </CardHeader>
                     <CardBody>
                         <p>{news.description}</p>
-                        <p>{news.name_time}</p>
+                        <p>{news.name}</p>
                     </CardBody>
 
 
@@ -52,8 +49,8 @@ export default class Articles extends Component {
     render() {
         return (
             <>
-            <h1>Articles </h1>
-            {this.renderArticle()}
+                <h1>Articles </h1>
+                {this.renderArticle()}
             </>
         )
     }

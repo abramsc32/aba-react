@@ -1,14 +1,17 @@
 import React from 'react'
-import { Input, Button } from './shared'
+import { Input } from './shared/Input'
+import { Button } from './shared/Button'
 
 const ArticleForm = (props) => {
 	const { onChange, onSubmit } = props
-	const { personName, title, description, paragraph, image} = props.formData
+	const { name, title, description, paragraph, image} = props.formData
+
 	return (
+
 		<form className='form' onSubmit={(e) => onSubmit(e)}>
 			<Input
 				name='name'
-				value={personName}
+				value={name}
 				required={true}
 				placeholder='Created By:'
 				onChange={(e) => onChange(e)}

@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom'
 import FrontPage from '../components/screens/FrontPage'
 import Articles from '../components/screens/Articles'
 import Teams from '../components/screens/Teams'
-import CreateArticle from '../components/ArticleForm'
+import CreateArticles from '../components/screens/CreateArticle'
+import Widget from '../components/screens/Widget'
 
 
 export const Routes = (props) => {
@@ -12,7 +13,8 @@ export const Routes = (props) => {
             <Route exact path= '/' component={FrontPage} />
             <Route exact path='/Articles' component={Articles} />
             <Route exact path='/Teams' component={Teams} />
-            <Route exact path='/Articles/CreateArticle' component={CreateArticle}/>
+            <Route exact path='/Articles/CreateArticle' component={CreateArticles}/>
+            <Route exact path='/Widget' component={Widget}/>
 
 
 

@@ -13,7 +13,7 @@
 }
 
 .primary {
-	background-color: #7986cb;
+	background-color: #047ACB;
 }
 
 .primary:hover {
@@ -21,7 +21,7 @@
 }
 
 .danger {
-	background-color: #ef5350;
+	background-color: #047ACB;
 	color: #f8f8f8;
 }
 

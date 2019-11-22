@@ -42,3 +42,71 @@ text-decoration: none;}
   width: 110px;
   height: 60px;
 }
+
+
+.leaderboard-card{
+  border: 3px solid black;
+  display: flex;
+  width: 500px;
+  height: 400px;
+  flex-flow: column;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.food-form{
+  width: 600px;
+  height: 700px;
+}
+
+
+.slot{
+  background: rgba(159, 159, 159, 0.502);
+}
+.leaderboard-card p{
+  height: 75px;
+  justify-content: center;
+  align-content: center;
+  margin:5px 0px 5px 0px;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+
+.form{
+    width: 750px;
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 350px;
+  }
+.name{
+  height:100px;
+}
+.input{
+  padding: 20px;
+}
+.food-form{
+text-align: center;
+}
+.input-title{
+  margin-left: 350px;
+}
+.aba-title{
+  display:flex;
+  align-content: center;
+  justify-content: center;
+}
+.teams-title{
+  display:flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.team-container{
+    display: flex;
+    flex-flow: wrap;
+}
+
+.widget-container{
+  display: flex;
+  flex-flow: wrap row;
+  
+}

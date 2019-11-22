@@ -72,7 +72,7 @@ export default class FrontPage extends Component {
     render() {
         return (
             <>
-                <h1>Front Page </h1>
+                <h1 className='aba-title'>American Basketball Association</h1>
                 {this.renderArticle()}
             </>
         )

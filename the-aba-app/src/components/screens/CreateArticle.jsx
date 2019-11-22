@@ -33,7 +33,7 @@ export default class CreateArticles extends Component {
             image
         }
         mockApi.post('/News', data)
-            .then((res) => res.status === 201 ? this.props.history.push('/Articles') : null)
+            .then((res) => res.status === 201 ? this.props.history.push('/') : null)
             .catch(() => this.setState({ errorMsg: 'There was an ERROR!' }))
     }
 
@@ -42,7 +42,7 @@ export default class CreateArticles extends Component {
         console.log('yoo')
         return (
             <div className="food-forms">
-                <h3>Create Article</h3>
+                <h3 className='input-title'>Create Article</h3>
                 <ArticleForm
                     formData={{ name, title, description, paragraph, image }}
                     onChange={this.handleChange}

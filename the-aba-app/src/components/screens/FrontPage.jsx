@@ -1,20 +1,20 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { mockApi } from '../../services/ApiConfig'
-import { Card } from '../shared/Card'
-import { CardHeader } from '../shared/CardHeader'
-import { CardBody } from '../shared/CardBody'
-import { MainArt } from '../frontCards/MainArt'
-import {TopPost} from '../shared/TopPost'
+import { TopPost } from '../shared/TopPost'
+import { TopHead } from '../shared/TopHead'
+import { TopContent } from '../shared/TopContent'
 
-  
+import { TopContainer } from '../shared/TopContainer'
+
+
 
 export default class FrontPage extends Component {
     constructor() {
         super()
         this.state = {
             articles: [],
-            numbers: [1, 2, 3, 4,5],
-            oneArticle:[],
+            numbers: [1, 2, 3, 4, 5],
+            oneArticle: [],
         }
     }
     componentDidMount() {
@@ -43,15 +43,28 @@ export default class FrontPage extends Component {
 
     renderArticle = () => {
         const {
-           
+
         } = this.props
-        
+
         if (this.state.articles.length) {
             return this.state.articles.map((news) => (
-                    <TopPost>
-                    <h1>{news.title}</h1> 
-                    </TopPost>
-                   
+                <TopPost>
+                    <TopHead>
+                        <h1 className='article-title'>{news.title}</h1>
+                        <p className='description'>{news.description}</p>
+                        <p className='author'> {news.name}</p>
+                        <TopContent imageUrl={news.image}/>
+                        <br></br>
+                        <p className='para1'>{news.paragraph}</p>
+                        <br></br>
+                        <p className='para2'>{news.paragraph2}</p>
+                        <br></br>
+                        <p className='para3'>{news.paragraph3}</p>
+                    </TopHead>
+                    <div className="seperate"></div>
+
+                </TopPost>
+
             )
             )
         }
@@ -59,8 +72,8 @@ export default class FrontPage extends Component {
     render() {
         return (
             <>
-            <h1>Front Page </h1>
-            {this.renderArticle()}
+                <h1>Front Page </h1>
+                {this.renderArticle()}
             </>
         )
     }

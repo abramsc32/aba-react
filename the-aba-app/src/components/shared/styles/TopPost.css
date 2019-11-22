@@ -1,3 +1,39 @@
 .top-post{
-    border: red 5px solid;
+    display: flex;
+    flex-flow: column;
+    width: 1000px;
+    margin-left: 200px;
+}
+.article-title{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.description{
+    width: 750px;
+    font-size: 15px;
+
+}
+.author{
+    font-size: 12px;
+
+}
+img{
+    margin-left:0px;
+    width: 750px;
+    height:450px;
+}
+
+
+.para1{
+    width: 750px;
+}
+.para2{
+    width: 750px;
+
+}.para3{
+    width: 750px;
+
+}
+.seperate{
+    border-bottom: 2px solid #047ACB;
 }

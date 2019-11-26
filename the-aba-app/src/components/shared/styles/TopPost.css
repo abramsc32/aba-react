@@ -37,3 +37,45 @@ img{
 .seperate{
     border-bottom: 2px solid #047ACB;
 }
+
+@media screen and (min-width: 420px){
+
+.top-post{
+    display: flex;
+    flex-flow: column;
+    width: 410px;
+    margin-left: 0px;
+    margin: 10px;
+}
+.description{
+    display: flex;
+    flex-flow: column;
+    width: 410px;
+}
+.top-image{
+    width: 415px;
+    margin: 2px;
+    
+}
+.para1{
+    width: 410px;
+    margin: 10px;
+
+}
+.para2{
+    width: 410px;
+    margin: 10px;
+
+
+}.para3{
+    width: 410px;
+    margin: 10px;
+
+}
+img{
+    width: 410px;
+}
+.aba-title{
+    text-align: center;
+}
+}

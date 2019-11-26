@@ -4,7 +4,6 @@ import { TopPost } from '../shared/TopPost'
 import { TopHead } from '../shared/TopHead'
 import { TopContent } from '../shared/TopContent'
 
-import { TopContainer } from '../shared/TopContainer'
 
 
 
@@ -32,14 +31,7 @@ export default class FrontPage extends Component {
             console.error(error)
         }
     }
-    // fetchOneArticle = async () => {
-    //     try {
-    //         const oneArticle = await mockApi.get(`/News/${News_id}`)
-    //         this.setState({oneArticle: oneArticle.data})
-    //     } catch(error){
-    //         console.error(error)
-    //     }
-    // }
+  
 
     renderArticle = () => {
         const {

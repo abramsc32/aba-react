@@ -17,12 +17,8 @@ const Nav = () => {
                 <NavLink exact to ='/Teams' activeClassName='active' className='publish-button'>
                     Teams
                </NavLink>
-                {/* <NavLink exact to='/Articles' activeClassName='active'>
-               </NavLink> */}
-
-                <NavLink exact to='/Widget' activeClassName='active' className='publish-button'>
-                    Stat Widget
-               </NavLink>
+            
+           
                </div>
 
         </nav>

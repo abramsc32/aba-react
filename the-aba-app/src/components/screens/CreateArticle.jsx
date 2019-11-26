@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ArticleForm from '../ArticleForm'
 import { mockApi } from '../../services/ApiConfig'
-
+import '../shared/styles/Create.css'
 export default class CreateArticles extends Component {
     constructor(props) {
         super(props)
@@ -39,7 +39,6 @@ export default class CreateArticles extends Component {
 
     render() {
         const { name, title, description, paragraph, image } = this.state
-        console.log('yoo')
         return (
             <div className="food-forms">
                 <h3 className='input-title'>Create Article</h3>
